@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: grid;
+}
+
+#app {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background: #ddd;
+    color: #000;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#app h1 {
+    text-align: left;
+}
+
+.balance {
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.inc-exp-container {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 0 0 10px 0;
+    background: #fff;
+
+}
+
+.inc-exp-container > div {
+    flex: 1;
+}
+
+.inc-exp-container div > div {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.inc-exp-container > div + div {
+    border-left: 1px solid #ddd;
+    padding-left: 40px;
+}
+
+.inc-exp-container .text-green {
+    color: green;
+}
+
+.inc-exp-container .text-red {
+    color: red;
+}
+
+/* traction-list */
+.traction-list {
+    margin: 10px 0 20px;
+}
+.traction-list h3 {
+    text-align: left;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px 0;
+}
+.traction-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.traction-list ul li {
+    display: flex;
+    justify-content: space-between;
+    border-right: 5px solid #ccc;
+    background: #fff;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.traction-list ul li button {
+    position: absolute;
+    left: -32px;
+    z-index: 9999;
+    padding: 10px 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.traction-list ul li:hover button {
+    opacity: 1;
+}
+
+.traction-list ul li.plus {
+    border-right-color: green;
+}
+
+.traction-list ul li.minus {
+    border-right-color: red;
+}
+
+/* new-transaction */
+.new-transaction h3 {
+    text-align: left;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px 0;
+}
+
+.new-transaction .form-control input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    outline: none;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.new-transaction .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
